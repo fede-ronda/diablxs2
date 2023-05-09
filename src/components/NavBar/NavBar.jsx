@@ -1,23 +1,25 @@
-import React from 'react'
-import './NavBar.css'
-import CartWidget from '../CartWidget/CartWidget'
+import React from "react";
+import "./NavBar.css";
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
-    return (
-        <header>
-            <h1>Diablxs</h1>
+  return (
+    <header>
+      <div className="titulo-logo">
+        <h1>Games Store</h1>
+        <CartWidget />
+      </div>
 
-            <nav>
-                <ul>
-                    <li>Buzos</li>
-                    <li>Pantalones</li>
-                    <li>Zapatillas</li>
-                </ul>
-            </nav>
+      <nav>
+        <ul>
+          <li>OFERTAS</li>
+          <li>PROXIMAMENTE</li>
+          <li>GENERO</li>
+          <li>TODOS LOS JUEGOS</li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
-        <CartWidget/>
-        </header>
-    )
-}
-
-export default NavBar
+export default NavBar;
