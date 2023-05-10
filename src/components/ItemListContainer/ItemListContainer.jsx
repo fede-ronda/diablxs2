@@ -1,11 +1,8 @@
 // rafce
-import './ItemListContainer.css';
-
+import "./ItemListContainer.scss";
 
 const ItemListContainer = (props) => {
-    return (
-        <h2>Próximamente {props.greeting} </h2>
-    )
-}
+  return <h2>Próximamente {props.greeting} </h2>;
+};
 
-export default ItemListContainer
+export default ItemListContainer;

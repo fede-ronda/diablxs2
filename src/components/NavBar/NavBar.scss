@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    &__titulo{
+        color: green;
+    }
+
+    &__nav ul{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+}
+
+
