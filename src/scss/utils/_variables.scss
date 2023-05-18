@@ -1,6 +1,11 @@
-:root{
-    // fuentes
+@import url("https://fonts.googleapis.com/css2?family=Rosario:wght@300;600&display=swap");
 
-    // colores
-    
+:root {
+  // fuentes
+  --font-rosario: "Rosario", sans-serif;
+
+  // colores
+
+  --color-negro: #050505;
+  --color-violeta: #27033d;
 }

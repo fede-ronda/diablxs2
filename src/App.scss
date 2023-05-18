@@ -1,0 +1,10 @@
+.Saludo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__Titulo {
+    padding: 1rem;
+    color: #fff;
+  }
+}

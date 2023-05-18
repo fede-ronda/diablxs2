@@ -1,3 +1,19 @@
-.imgCarrito{
-    width: 1.5rem;
+.Cart {
+  display: flex;
+  gap: 0.1rem;
+  color: #fff;
+
+  &__Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  &__Num {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1rem;
+  }
 }

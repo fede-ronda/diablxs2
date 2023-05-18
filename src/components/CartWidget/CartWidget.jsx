@@ -1,11 +1,13 @@
 import "./_CartWidget.scss";
+import { BsFillCartFill } from "react-icons/bs";
 
 const CardWidget = () => {
-  const ImgCarrito = "https://cdn-icons-png.flaticon.com/512/263/263142.png";
   return (
-    <div>
-      <img className="imgCarrito" src={ImgCarrito} alt="cart" />
-      <strong>1</strong>
+    <div className="Cart">
+      <div className="Cart__Icon">
+        <BsFillCartFill />
+      </div>
+      <strong className="Cart__Num">1</strong>
     </div>
   );
 };

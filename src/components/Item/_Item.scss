@@ -1,0 +1,47 @@
+.CardProducto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 14rem;
+  height: 18rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0px 10px 10px -10px #000000;
+
+  &__Img {
+    width: 140px;
+    height: 140px;
+    margin-top: 0.5rem;
+  }
+
+  &__Titulo {
+    font-size: 2rem;
+  }
+
+  &__Precio {
+    font-size: 1.2rem;
+  }
+}
+
+.CardProducto:hover {
+  transform: scale(1.03);
+  transition-duration: 0.25s;
+  box-shadow: 0px 10px 10px -10px #fff;
+  border-bottom: solid 1px rgb(197, 197, 197);
+}
+
+.btnProducto {
+  border-radius: 1rem;
+  border-style: none;
+  background-color: #c9c0cf;
+  width: 4rem;
+  height: auto;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.btnProducto:hover {
+  background-color: #ba99cf;
+}

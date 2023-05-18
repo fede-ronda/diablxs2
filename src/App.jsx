@@ -7,8 +7,10 @@ function App() {
     <>
       <div className="App">
         <NavBar />
-        <h1>¡Bienvenidos!</h1>
-        <ItemListContainer greeting="se vienen cositas..." />
+        <div className="Saludo">
+          <h1 className="Saludo__Titulo">¡Bienvenidos a PC Store!</h1>
+        </div>
+        <ItemListContainer />
       </div>
     </>
   );
