@@ -12,12 +12,21 @@
     font-weight: 600;
   }
 
-  &__nav ul {
+  &__nav--ul {
     display: flex;
     align-items: center;
     gap: 1rem;
     color: #fff;
     font-weight: 600;
+  }
+
+  &__nav--ul li {
+    text-decoration: none;
     cursor: pointer;
+  }
+
+  &__nav--ul li:hover {
+    scale: 1.03;
+    transition: 0.1s;
   }
 }

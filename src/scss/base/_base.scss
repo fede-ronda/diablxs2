@@ -6,8 +6,11 @@
   font-family: var(--font-rosario);
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  height: 110vh;
   background: rgb(5, 5, 5);
   background: linear-gradient(
     0deg,
@@ -29,5 +32,10 @@ p {
 }
 
 a {
+  text-decoration: none;
+}
+
+.inactive {
+  color: #fff;
   text-decoration: none;
 }

@@ -1,0 +1,18 @@
+.App {
+  &__Saludo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-Titulo {
+      padding: 1rem;
+      color: #fff;
+    }
+  }
+
+  &__Container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
