@@ -1,10 +1,10 @@
 const productos = [
-    { nombre: "mother", precio: 60000, id: "1",idCat:"1", img: "../img/mother.jpg"},
-    { nombre: "procesador", precio: 110000, id: "2",idCat:"2", img: "../img/procesador.jpg"},
-    { nombre: "ram", precio: 30000, id: "3",idCat:"3", img: "../img/ram.png"},
-    { nombre: "placa", precio: 250000, id: "4",idCat:"4", img: "../img/placa.jpg"},
-    { nombre: "fuente", precio: 40000, id: "5",idCat:"5", img: "../img/fuente.jfif"},
-    { nombre: "gabinete", precio: 35000, id: "6",idCat:"6", img: "../img/gabinete.jpg"},
+    { nombre: "mother", precio: 60000, id: "1",idCat:"1",stock:10, img: "../img/mother.jpg"},
+    { nombre: "procesador", precio: 110000, id: "2",idCat:"2",stock:10, img: "../img/procesador.jpg"},
+    { nombre: "ram", precio: 30000, id: "3",idCat:"3",stock:10, img: "../img/ram.png"},
+    { nombre: "placa", precio: 250000, id: "4",idCat:"4",stock:10, img: "../img/placa.jpg"},
+    { nombre: "fuente", precio: 40000, id: "5",idCat:"5",stock:10, img: "../img/fuente.jfif"},
+    { nombre: "gabinete", precio: 35000, id: "6",idCat:"6",stock:10, img: "../img/gabinete.jpg"},
 ]
 
 // retraso de red

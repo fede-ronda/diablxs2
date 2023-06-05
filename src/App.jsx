@@ -23,6 +23,7 @@ function App() {
             element={<ItemListContainer />}
           />
           <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+          <Route path="*" element={<h2>CARRITO</h2>} />
         </Routes>
       </BrowserRouter>
       {/* <div className="App">
