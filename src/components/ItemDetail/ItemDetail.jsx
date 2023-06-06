@@ -1,4 +1,3 @@
-import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -14,7 +13,7 @@ const ItemDetail = ({ id, nombre, precio, stock, img }) => {
 
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad);
-    //console.log("productos agregados:" + cantidad);
+    // console.log("productos agregados:" + cantidad);
 
     const item = { id, nombre, precio };
     agregarProducto(item, cantidad);
