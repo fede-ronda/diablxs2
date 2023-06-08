@@ -1,10 +1,8 @@
-// rafce
 import { useState, useEffect } from "react";
-import { getProductos, getProductosCategoria } from "../../asyncmock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-
-// import Contador from "../Contador/Contador";
+import { db } from "../../services/config";
+import { collection, getDocs, where, query } from "firebase/firestore";
 
 import "./ItemListContainer.scss";
 
@@ -14,18 +12,25 @@ const ItemListContainer = () => {
   const { idCategoria } = useParams();
 
   useEffect(() => {
-    const funcionProductos = idCategoria ? getProductosCategoria : getProductos;
+    const misProductos = idCategoria
+      ? query(collection(db, "productos"), where("idCat", "==", idCategoria))
+      : collection(db, "productos");
 
-    funcionProductos(idCategoria)
-      .then((res) => setProductos(res))
-      .catch((error) => console.error(error));
+    getDocs(misProductos)
+      .then((res) => {
+        const nuevosProductos = res.docs.map((doc) => {
+          const data = doc.data();
+          return { id: doc.id, ...data };
+        });
+        setProductos(nuevosProductos);
+      })
+      .catch((error) => console.log(error));
   }, [idCategoria]);
 
   return (
     <div className="fondo">
       <h2 className="fondo__Titulo">PRODUCTOS</h2>
       <ItemList productos={productos} />
-      {/* <Contador inicial={1} stock={10} /> FUNCIONANDO */}
     </div>
   );
 };
