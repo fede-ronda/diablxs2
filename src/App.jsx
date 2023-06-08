@@ -2,15 +2,16 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CarritoProvider } from "./Context/CarritoContext";
+import Cart from "./components/Cart/Cart";
 
 import "./_App.scss";
-import { CarritoProvider } from "./Context/CarritoContext";
 
 function App() {
   return (
     <>
-      <CarritoProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <CarritoProvider>
           <div className="App">
             <NavBar />
             <div className="App__Saludo">
@@ -24,11 +25,12 @@ function App() {
               path="/categoria/:idCategoria"
               element={<ItemListContainer />}
             />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/item/:idItem" element={<ItemDetailContainer />} />
             <Route path="*" element={<h2>CARRITO</h2>} />
           </Routes>
-        </BrowserRouter>
-      </CarritoProvider>
+        </CarritoProvider>
+      </BrowserRouter>
     </>
   );
 }
