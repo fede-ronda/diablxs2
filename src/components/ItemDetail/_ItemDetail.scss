@@ -4,7 +4,7 @@
   gap: 1rem;
   background-color: #fff;
   border-radius: 1rem;
-  width: 90%;
+  width: 80%;
   height: auto;
 
   &__Img {
@@ -28,7 +28,27 @@
     }
 
     &-Texto {
-      padding-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-right: 2rem;
     }
   }
+}
+
+.btn {
+  border-radius: 1rem;
+  border-style: none;
+  background-color: #c9c0cf;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 12rem;
+  height: auto;
+}
+
+.btn:hover {
+  background-color: #ba99cf;
+  color: var(--color-violeta);
 }

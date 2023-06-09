@@ -13,7 +13,6 @@ const ItemDetail = ({ id, nombre, precio, stock, img }) => {
 
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad);
-    // console.log("productos agregados:" + cantidad);
 
     const item = { id, nombre, precio };
     agregarProducto(item, cantidad);
@@ -26,12 +25,11 @@ const ItemDetail = ({ id, nombre, precio, stock, img }) => {
 
         <div className="contenedorItemDetail__Info">
           <h2 className="contenedorItemDetail__Info-Titulo">{nombre}</h2>
-          <span className="contenedorItemDetail__Info-Id">ID: {id}</span>
           <span className="contenedorItemDetail__Info-Precio">
-            Total: ${precio}
+            Precio: ${precio}
           </span>
           {agregarCantidad > 0 ? (
-            <Link to="/cart"> Terminar compra </Link>
+            <Link to="/cart" className="btn"> Terminar compra </Link>
           ) : (
             <ItemCount
               inicial={1}
@@ -39,13 +37,12 @@ const ItemDetail = ({ id, nombre, precio, stock, img }) => {
               funcionAgregar={manejadorCantidad}
             />
           )}
-          <p className="contenedorItemDetail__Info-Texto">
-            <strong>Descripcion:</strong> Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Eaque consequuntur, vitae adipisci autem quas
-            minus perspiciatis fugiat distinctio inventore porro libero, cumque
-            earum ipsum alias perferendis, sapiente reprehenderit officia.
-            Voluptatum.
-          </p>
+          <ul className="contenedorItemDetail__Info-Texto">
+            <strong>Acerca de este producto:</strong>
+            <li>
+              - Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit animi labore magni enim quod, voluptates at quasi, unde est iusto non impedit numquam rerum suscipit, nulla libero temporibus atque sunt.
+            </li>
+          </ul>
         </div>
       </div>
     </>

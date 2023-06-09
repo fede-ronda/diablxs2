@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CarritoProvider } from "./Context/CarritoContext";
 import Cart from "./components/Cart/Cart";
+import Checkout from "./components/Checkout/Checkout";
 
 import "./_App.scss";
 
@@ -26,6 +27,7 @@ function App() {
               element={<ItemListContainer />}
             />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
             <Route path="/item/:idItem" element={<ItemDetailContainer />} />
             <Route path="*" element={<h2>SITIO EN CONSTRUCCION</h2>} />
           </Routes>

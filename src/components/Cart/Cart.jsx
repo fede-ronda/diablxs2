@@ -21,22 +21,36 @@ const Cart = () => {
   if (totalCantidad === 0) {
     return (
       <>
-        <h2>No hay productos en el carrito</h2>
-        <Link to="/">Seguir comprando</Link>
+        <div className="cartVacio">
+          <div className="cartVacio__Contenido">
+            <h2>No hay productos en el carrito :'(</h2>
+            <Link className="btn" to="/">Seguir comprando</Link>
+          </div>
+        </div>
+
+
       </>
     );
   }
 
   return (
-    <div>
-      {carrito.map((producto) => (
-        <CartItem key={producto.id} {...producto} />
-      ))}
-      <h3>Cantidad total: {totalCantidad}</h3>
-      <h3>Total: ${total}</h3>
-      <button onClick={() => vaciarCarrito()}>Vaciar carrito</button>
-      <Link to="/checkout">Finalizar compra</Link>
-    </div>
+    <>
+      <div className="cartContainer">
+        {carrito.map((producto) => (
+          <CartItem key={producto.id} {...producto} />
+        ))}
+        <div className="cartInfo">
+          <h3>Productos en total: {totalCantidad}</h3>
+          <h3> Valor total: ${total}</h3>
+          <button className="btn" onClick={() => vaciarCarrito()}>Vaciar carrito</button>
+          <Link className="btn" to="/checkout">Finalizar compra</Link>
+        </div>
+      </div>
+
+
+
+    </>
+
   );
 };
 

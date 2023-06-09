@@ -1,0 +1,33 @@
+.cartVacio {
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+  margin: 0;
+
+  &__Contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cartInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 80%;
+  height: 4rem;
+}

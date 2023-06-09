@@ -3,6 +3,7 @@
   gap: 0.5rem;
 
   &__num {
+    font-size: 1.5rem;
     color: var(--color-negro);
   }
 
@@ -16,12 +17,13 @@
     height: auto;
 
     &--agregar {
+      font-size: 1.5rem;
       border-radius: 1rem;
       border-style: none;
       background-color: #c9c0cf;
       cursor: pointer;
       color: #fff;
-      width: 3.5rem;
+      width: 6rem;
       height: auto;
     }
 
